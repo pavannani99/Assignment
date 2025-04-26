@@ -23,7 +23,7 @@ const ButtonColorAssignment = () => {
       disabled: false 
     }))
   );
-  
+
   // Current color index to assign
   const [colorIndex, setColorIndex] = useState(0);
   
@@ -158,7 +158,7 @@ const ButtonColorAssignment = () => {
     setColorIndex(prev => prev - 1);
   };
   
-  
+
   const resetAll = () => {
     setButtons(Array(9).fill().map((_, i) => ({ 
       id: i, 
@@ -208,7 +208,7 @@ const ButtonColorAssignment = () => {
           style={{ width: `${(colorIndex / colors.length) * 100}%` }} 
         />
       </div>
-      
+
       {/* Instructions */}
       <p className="instructions">
         Click any button to assign the next color in sequence.
@@ -235,7 +235,7 @@ const ButtonColorAssignment = () => {
           </button>
         ))}
       </div>
-      
+
       {/* Action buttons */}
       <div className="action-buttons">
         <button 
@@ -255,7 +255,7 @@ const ButtonColorAssignment = () => {
           ⟳ Reset All
         </button>
       </div>
-      
+
       {/* Completion message */}
       {colorIndex === colors.length && (
         <div className="completion-container">
